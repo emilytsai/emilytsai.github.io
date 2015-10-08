@@ -1,0 +1,39 @@
+body {
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+    background-color: moccasin;
+    color: white;
+    font-size: 18px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar-item {
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.header {
+    height: 500px;
+    background-image: url();
+    font-family: 'Inconsolata', ;
+}
+
+.header-title {
+    font-size: 48px;
+}
+
+.header-description {
+    font-size: 20px;
+}
