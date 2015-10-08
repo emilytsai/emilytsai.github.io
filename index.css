@@ -6,6 +6,8 @@ body {
     background-color: moccasin;
     color: white;
     font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .navbar li {
@@ -16,18 +18,21 @@ body {
     border-radius: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .header {
     height: 500px;
-    position: relative;
-    background-image: url();
     font-family: 'Inconsolata', ;
     color: white;
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.header-picture {
+    width: 600px;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
 }
 
 .header-layer {
@@ -41,10 +46,18 @@ body {
 
 #header-title {
     font-size: 48px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    top: 400px;
 }
 
 #header-description {
     font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    top: 460px;
 }
 
 .aboutme {
