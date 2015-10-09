@@ -1,5 +1,6 @@
 body {
     margin: 0, auto;
+    background-image: url("images/bubble-pic.jpg");
     width: 100%;
     font-family: 'Raleway', sans-serif;
 }
@@ -16,12 +17,12 @@ body {
 
 #navbar-title {
     font-size: 38px;
-    left: 5px;
+    text-align: left;
     padding: 5px;
 }
 
 #navbar-options {
-    right: 5px;
+    text-align: right;
 }
 
 .navbar ul {
@@ -31,7 +32,7 @@ body {
 .navbar li {
     display: inline;
     padding-right: 5px;
-    color: gray;
+    color: black;
 }
 
 .navbar a {
