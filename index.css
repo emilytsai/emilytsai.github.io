@@ -26,6 +26,7 @@ body {
     padding-top: 2px;
     padding-bottom: 2px;
     cursor: pointer;
+    color: gray;
     text-decoration: none;
 }
 
@@ -37,6 +38,22 @@ body {
 .navbar a:hover {
     color: black;
     text-decoration: none;
+}
+
+.navbar link-img:hover {
+    transform: scale(1.1);
+}
+
+#email-img {
+    height: 32px;
+}
+
+#github-img {
+    height: 32px;
+}
+
+#linkedin-img {
+    height: 32px;
 }
 
 .header {
