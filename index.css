@@ -15,8 +15,13 @@ body {
 }
 
 #navbar-title {
-    font-size: 28px;
+    font-size: 38px;
+    left: 5px;
     padding: 5px;
+}
+
+#navbar-options {
+    right: 5px;
 }
 
 .navbar ul {
