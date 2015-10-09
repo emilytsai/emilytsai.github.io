@@ -45,16 +45,21 @@ body {
     transform: scale(1.1);
 }
 
+.link-img {
+    padding-left:2px;
+    padding-right:2px;
+}
+
 #email-img {
-    height: 32px;
+    height: 20px;
 }
 
 #github-img {
-    height: 32px;
+    height: 20px;
 }
 
 #linkedin-img {
-    height: 32px;
+    height: 20px;
 }
 
 .header {
@@ -64,10 +69,9 @@ body {
 }
 
 .header-picture {
-    width: 100%;
+    width: 1000px;
     height: auto;
     position: fixed;
-    overflow: hidden;
 }
 
 #header-title {
