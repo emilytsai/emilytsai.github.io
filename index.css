@@ -17,6 +17,7 @@ body {
 .navbar li {
     display: inline;
     padding-right: 10px;
+    color: gray;
 }
 
 .navbar a {
@@ -63,8 +64,8 @@ body {
 }
 
 .header-picture {
-    width: cover;
-    height: 100%;
+    width: 100%;
+    height: auto;
     position: fixed;
     overflow: hidden;
 }
@@ -103,6 +104,8 @@ body {
 #aboutme-picture {
     float: right;
     padding: 50px;
+    width: 600px;
+    height: auto;
 }
 
 #aboutme-text {
