@@ -104,8 +104,10 @@ body {
 #aboutme-picture {
     float: right;
     padding: 50px;
-    width: 30%;
-    height: auto;
+    height: auto; 
+    width: auto; 
+    max-width: 200px; 
+    max-height: 300px;
 }
 
 #aboutme-text {
