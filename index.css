@@ -6,10 +6,8 @@ body {
 
 .navbar {
     position: relative;
-    z-index: -1;
     top: 0;
     padding: 3px 0px;
-    font-size: 18px;
     width: 100%;
     background-color: white;
 }
@@ -17,10 +15,10 @@ body {
 #navbar-title {
     font-size: 38px;
     text-align: left;
-    padding: 5px;
 }
 
 #navbar-options {
+    font-size: 18px;
     text-align: right;
 }
 
@@ -113,7 +111,7 @@ body {
     font-size: 20px;
     text-align: right;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 22px;
     padding-bottom: 50px;
     position: relative;
     top: 300px;
@@ -122,8 +120,8 @@ body {
 .aboutme {
     background-color: rgba(260, 247, 188, 1.0);
     position: absolute;
-    display: inline;
     width: 100%;
+    height: auto;
     font-size: 14px;
     color: black;
     padding: 20px;
@@ -143,13 +141,15 @@ body {
 }
 
 #aboutme-picture img {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    right: 50px;
 }
 
 #aboutme-text {
     width: 600px;
     padding: 50px;
-    position: absolute;
+    position: relative;
+    left: 50px;
 }
 
