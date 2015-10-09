@@ -38,6 +38,7 @@ body, html {
 
 #header-title {
     background-color: rgba(248, 247, 216, 0.4);
+    width: 100%;
     font-size: 48px;
     text-align: right;
     padding-left: 20px;
@@ -49,6 +50,7 @@ body, html {
 
 #header-description {
     background-color: rgba(248, 247, 216, 0.4);
+    width: 100%;
     font-size: 20px;
     text-align: right;
     padding-left: 20px;
@@ -64,7 +66,8 @@ body, html {
     position: absolute;
     font-size: 14px;
     color: gray;
-    margin: 0;
+    width: 100%;
+    margin: 0px auto;
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: "Raleway", sans-serif;
@@ -74,9 +77,9 @@ body, html {
     padding-top: 40px;
     padding-bottom: 40px;
     padding-right: 40px;
-    padding-left: 20px;
-    height: 350px; 
-    width: 35%;
+    padding-left: 10px;
+    height: 300px; 
+    width: 30%;
     position: relative;
     float: right;
 }
@@ -90,7 +93,7 @@ body, html {
     width: 50%;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-right: 20px;
+    padding-right: 10px;
     padding-left: 40px;
     position: relative;
     float: left;
