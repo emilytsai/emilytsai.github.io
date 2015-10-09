@@ -6,7 +6,7 @@ body {
 }
 
 .navbar {
-    position: relative;
+    position: absolute;
     top: 0;
     padding: 3px 0px;
     font-size: 18px;
@@ -131,9 +131,11 @@ body {
 }
 
 #aboutme-picture {
-    padding: 20px;
+    padding: 50px;
     height: 300px; 
     width: 300px;
+    position: relative;
+    right: 50px;
 }
 
 #aboutme-picture img {
