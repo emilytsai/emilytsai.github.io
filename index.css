@@ -5,13 +5,17 @@ body {
 }
 
 .navbar {
-    position: fixed;
+    position: relative;
     top: 0;
     padding: 3px 0px;
     font-size: 18px;
     width: 100%;
     text-align: right;
     background-color: white;
+}
+
+#navbar-title {
+    font-size: 28px;
 }
 
 .navbar li {
@@ -121,7 +125,6 @@ body {
 }
 
 #aboutme-picture img {
-    float: right;
     width: auto;
     height: 100%;
 }
@@ -129,4 +132,8 @@ body {
 #aboutme-text {
     width: 600px;
     padding: 50px;
+}
+
+#aboutme-section {
+    display: inline;
 }
