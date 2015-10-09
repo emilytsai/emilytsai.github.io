@@ -13,7 +13,7 @@ body, html {
 /* Header */
 .header {
     clear: both;
-    height: 450px;
+    height: 500px;
     margin: 0px auto;
     top: 0;
     font-family: 'Inconsolata', ;
@@ -42,7 +42,7 @@ body, html {
     padding-right: 20px;
     padding-top: 40px;
     position: relative;
-    top: 300px;
+    top: 350px;
 }
 
 #header-description {
@@ -53,7 +53,7 @@ body, html {
     padding-right: 20px;
     padding-bottom: 50px;
     position: relative;
-    top: 300px;
+    top: 350px;
 }
 
 /* About Me */
@@ -69,8 +69,6 @@ body, html {
 }
 
 #aboutme-picture {
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-right: 50px;
     padding-left: 10px;
     height: 300px; 
