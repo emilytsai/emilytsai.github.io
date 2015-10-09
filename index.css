@@ -1,12 +1,15 @@
-body {
+body, html {
     margin: 0, auto;
     width: 100%;
     font-family: 'Raleway', sans-serif;
 }
 
+.clear {
+    clear: both;
+}
+
+/* Navigation Bar */
 .navbar {
-    position: relative;
-    top: 0;
     width: 100%;
     background-color: white;
 }
@@ -14,17 +17,11 @@ body {
 #navbar-title {
     font-size: 38px;
     float: left;
-    text-align: left;
 }
 
 #navbar-options {
     font-size: 18px;
     float: right;
-    text-align: right;
-}
-
-.navbar ul {
-    display: inline;
 }
 
 .navbar li {
@@ -54,22 +51,15 @@ body {
     text-decoration: none;
 }
 
-.navbar link-img:hover {
-    opacity: 0.5;
+.link-img:hover {
+    opacity: 0.6;
 }
 
-#email-img {
+.link-img {
     height: 20px;
 }
 
-#github-img {
-    height: 20px;
-}
-
-#linkedin-img {
-    height: 20px;
-}
-
+/* Header */
 .header {
     clear: both;
     width: 100%;
@@ -114,27 +104,22 @@ body {
     top: 300px;
 }
 
+/* About Me */
 .aboutme {
     background-color: rgba(260, 247, 188, 1.0);
     position: absolute;
-    width: 100%;
-    height: auto;
     font-size: 14px;
-    color: black;
+    color: gray;
     padding: 20px;
     font-family: "Raleway", sans-serif;
 }
 
-.aboutme-section {
-    display: inline;
-}
-
 #aboutme-picture {
-    padding: 50px;
+    padding: 30px;
     height: 300px; 
     width: 300px;
     position: relative;
-    right: 20px;
+    float: right;
 }
 
 #aboutme-picture img {
@@ -143,9 +128,9 @@ body {
 }
 
 #aboutme-text {
-    width: 600px;
-    padding: 50px;
+    width: 60%;
+    padding: 30px;
     position: relative;
-    left: 50px;
+    float: left;
 }
 
