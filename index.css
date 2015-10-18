@@ -1,153 +1,147 @@
-body, html {
-    margin: 0px auto;
-    padding: 0;
-    width: 100%;
-    display: block;
-    font-family: 'Raleway', sans-serif;
-}
+/*@media (min-width: 875px) {*/
+    body, html {
+        margin: 0px auto;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+        font-family: 'Raleway', sans-serif;
+    }
 
-.clear {
-    clear: both;
-}
+    .clear {
+        clear: both;
+    }
 
-/* Header */
-.header {
-    clear: both;
-    height: 500px;
-    margin: 0px auto;
-    top: 0;
-    font-family: 'Inconsolata', ;
-    color: white;
-    position: relative;
-    z-index: -1;
-}
+    /* Header */
+    .header {
+        margin: 0px auto;
+        height: 100%;
+        width: 40%;
+        font-family: 'Inconsolata', ;
+        font-weight: 600;
+        color: black;
+        position: relative;
+        float: left;
+    }
 
-#header-picture {
-    top: 0;
-    height: 600px;
-    position: fixed;
-    z-index: -1;
-}
+    #header-picture {
+        top: 0;
+        height: 100%;
+        width: auto;
+        margin-left: -10px;
+        position: fixed;
+        z-index: -100;
+    }
 
-#header-picture img {
-    width: 100%;
-    height: auto;
-}
+    #header-picture img {
+        width: auto;
+        height: 100%;
+        overflow: hidden;
+    }
 
-#header-title {
-    background-color: rgba(248, 247, 216, 0.4);
-    font-size: 48px;
-    text-align: right;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 40px;
-    position: relative;
-    top: 350px;
-}
+    #header-title {
+        background-color: rgba(248, 247, 216, 0.5);
+        width: 100%;
+        font-size: 40px;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 30px;
+        position: relative;
+        top: 72%;
+        z-index: -1
+    }
 
-#header-description {
-    background-color: rgba(248, 247, 216, 0.4);
-    font-size: 20px;
-    text-align: right;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 50px;
-    position: relative;
-    top: 350px;
-}
+    #header-description {
+        background-color: rgba(248, 247, 216, 0.5);
+        width: 100%;
+        font-size: 20px;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        position: relative;
+        top: 72%;
+        z-index: -1
+    }
 
-/* About Me */
-.aboutme {
-    background-color: rgba(260, 247, 188, 1.0);
-    position: absolute;
-    font-size: 14px;
-    color: gray;
-    margin: 0px auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: "Raleway", sans-serif;
-}
+    /* About Me */
+    .aboutme {
+        background-color: rgba(260, 247, 188, 1.0);
+        height: 100%;
+        width: 60%;
+        font-size: 16px;
+        color: gray;
+        margin: auto;
+        position: relative;
+        float: right;
+        overflow: hidden;
+        z-index: -1;
+    }
+    
+    #aboutme-text {
+        font-family: "Raleway", sans-serif;
+        height: 100%;
+        width: 60%;
+        padding: 80px;
+        margin: auto;
+    }
 
-#aboutme-picture {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 50px;
-    padding-left: 10px;
-    height: 250px; 
-    width: 250px;
-    position: relative;
-    float: right;
-}
+    /* Navigation Bar */
+    .navbar {
+        margin: 0px, auto;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        padding-right: 20px;
+        padding-left: 20px;
+        background-color: white;
+        position: relative;
+    }
 
-#aboutme-picture img {
-    width: 100%;
-    height: auto;
-}
+    #navbar-title {
+        font-size: 38px;
+        padding-left: 20px;
+        margin: 0;
+        display: block;
+        color: black;
+        float: left;
+    }
 
-#aboutme-text {
-    width: 50%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 10px;
-    padding-left: 50px;
-    position: relative;
-    float: left;
-}
+    #navbar-options {
+        font-size: 20px;
+        padding-top: 15px;
+        padding-right: 20px;
+        margin: 0;
+        color: black;
+        float: right;
+    }
 
-/* Navigation Bar */
-.navbar {
-    margin: 0px, auto;
-    padding-top: 10px;
-    padding-bottom: 7px;
-    padding-right 20px;
-    padding-left: 20px;
-    background-color: white;
-    position: relative;
-}
+    .navbar li {
+        display: inline;
+        padding: 5px;
+    }
 
-#navbar-title {
-    font-size: 38px;
-    padding-left: 20px;
-    margin: 0;
-    display: block;
-    color: black;
-    float: left;
-}
+    .navbar a {
+        cursor: pointer;
+        color: gray;
+        text-decoration: none;
+    }
 
-#navbar-options {
-    font-size: 18px;
-    padding-top: 15px;
-    padding-right: 20px;
-    margin: 0;
-    color: black;
-    float: right;
-}
+    .navbar a:link, .navbar link-img:link {
+        color: gray;
+        text-decoration: none;
+    }
 
-.navbar li {
-    display: inline;
-    padding: 5px;
-}
+    .navbar a:hover {
+        color: black;
+        text-decoration: none;
+    }
 
-.navbar a {
-    cursor: pointer;
-    color: gray;
-    text-decoration: none;
-}
+    .link-img:hover {
+        opacity: 0.5;
+    }
 
-.navbar a:link, .navbar link-img:link {
-    color: gray;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    color: black;
-    text-decoration: none;
-}
-
-.link-img:hover {
-    opacity: 0.5;
-}
-
-.link-img {
-    height: 20px;
-}
+    .link-img {
+        height: 20px;
+    }   
+/*}*/
