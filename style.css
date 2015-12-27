@@ -1,18 +1,25 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+html {
+    min-height: 100%;
     width: 100%;
     display: block;
     font-family: 'Muli', sans-serif;
     font-size: 16px;
-    display: block;
+    position: relative;
+}
+
+body {
+    margin: 40px 0 60px;
 }
 
 a {
     cursor: pointer;
-    color: #B0B0B0;
+    color: black;
     text-decoration: none;
+}
+
+.type-text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 42px;
 }
 
 .clear {
@@ -29,55 +36,96 @@ a {
 }
 
 #curr a {
-    color: #4CAF50;
+    color: #ff751a;
 }
 
-/* Landing Page Stuff */
-.main-body {
+.color-splash {
+    color: #ff751a;
+}
+
+/* Page Contents Style Stuff */
+.right-body {
     float: right;
     background-color: white;
     text-align: center;
-    height: 100%;
+    padding-top: 14%;
     width: 60%;
 }
 
-.main-photo {
+.left-photo {
     float: left;
     width: 40%;
 }
 
 .enter-button {
     text-align: center;
+    margin-top: 10px;
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 4px;
     padding-bottom: 4px;
     border-style: double;
-    border-color: #4CAF50;
-    color: #4CAF50;
+    border-color: #ff751a;
+    color: #ff751a;
 }
 
 .enter-button:hover {
     opacity: 0.4;
 }
 
-/* Container */
-.container {
+.content {
+    margin-top: 3.5em;
     padding-left: 8%;
     padding-right: 8%;
 }
 
 .grid {
-    width: 30%;
-    height: 30%;
     margin: 10px;
+    width: 30%;
+    min-width: 250px;
+    height: 30%;
+    min-height: 250px;
     display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.grid a:hover {
+    opacity: 0.5;
 }
 
 .grid-image {
     max-width: 100%;
     max-height: 100%;
     overflow: hidden;
+    padding-bottom: 5px;
+}
+
+/* Projects Navigation Bar/Header */
+.header {
+    margin: auto;
+    padding: 20px 40px 20px 40px;
+    background-color: rgba(190, 200, 200, 1);
+    text-align: center;
+    list-style: none;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
+
+.header a:hover{
+    color: #ff751a;
+}
+
+.header li {
+    display: inline;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#currproject a {
+    text-transform: uppercase;
+    color: white;
 }
 
 /* Navigation Bar */
@@ -87,28 +135,39 @@ a {
     padding-bottom: 12px;
     padding-right: 20px;
     padding-left: 20px;
-    background-color: white;
-    position: relative;
+    background-color: rgba(255, 255, 255, 1);
     text-align: center;
+    position: fixed;
+    top: 0em;
+    width: 100%;
+    z-index: 1000;
 }
 
-.navbar a:hover { color: black; }
+.navbar a {
+    color: rgba(190, 200, 200, 1);
+    font-weight: normal;
+}
+
+.navbar a:hover {
+    color: black;
+}
 
 .navbar li {
     display: inline;
     padding: 15px;
+    font-weight: bold;
 }
 
 /* Footer */
 .footer {
     margin: auto;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: white;
-    position: relative;
-    bottom: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
 }
 
