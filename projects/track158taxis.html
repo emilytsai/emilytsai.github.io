@@ -49,30 +49,35 @@
     <!-- Content -->
     <div class="projects-body">
       <p>
-        Course: MUSIC 158A<br>
-        Sound and Music Computing with CNMAT Technologies<br>
+        Course: MUSIC 158A - Sound and Music Computing with CNMAT Technologies<br>
         Semester: Fall 2015<br>
-        Repository: [<a href="https://github.com/emilytsai/track158-taxis">track158-taxis</a>]
+        Github repository: [<a href="https://github.com/emilytsai/track158-taxis">track158-taxis</a>]
       </p>
       <div class="white-space"></div>
       <p>
-        The class midterm assignment was the following quest: "Create something cool in Max."
+        The class assignment was the following quest: "Create something cool in Max."
       </p>
+      <br>
+      <h1>THE IDEA, THE CODE</h1>
       <p>
-        For my project, I created a data "audio"-lization of taxi data.
+        For my project, I created a data "audio"-lization of taxi data. Using real NYC taxi data, I created a program that tracks the unique path of a taxi over the course of 24 hours and translates the taxi's locations into sound based on its latitude and longitude coordinates.
       </p>
       <img src="../assets/images/presentationMode.png" class="skinnier">
-      <p class="subtitle">The program's user interface</p>
+      <p class="subtitle">The Max program's user interface. When the program is run, the colored blocks will show an "X" (a taxi) traveling across it. The "X" tracks the movement of the taxis; its placement marks the distance from, and weight of, each of the four different kinds of soundwaves used in this program (the types of soundwaves are in the four circles).</p>
       <p>
-        With the polyline-encoded data from Chris Whong's <a href="http://nyctaxi.herokuapp.com">NYC Taxis: A Day in the Life</a> project (original data can be found at <a href="http://www.andresmh.com/nyctaxitrips/">2013 NYC Taxi Trip Data</a>), I wrote a Python script that unpacks these data files and translates the taxi's movements into sound by tracking its unique path across New York City. The script unpacks the polylines in the CSV files, creates timed OSC bundles of polyline-decoded taxi movements, and sends the relevant information--such as the longitude and latitude coordinates--to Max. In Max, four voices are set up to track up to four taxis' movements at a time, with each of their sound paths layered together.
+        Using the <a href="https://developers.google.com/maps/documentation/utilities/polylinealgorithm?hl=en">polyline-encoded</a> data from Chris Whong's <a href="http://nyctaxi.herokuapp.com">NYC Taxis: A Day in the Life</a> project (original data can be found at the <a href="http://www.andresmh.com/nyctaxitrips/">2013 NYC Taxi Trip Data</a>), I wrote a set of Python scripts that takes the decoded data files and translates the taxi's unique path across New York City into sound. Using <a href="https://gist.github.com/signed0/2031157">this polyline-decoder script</a>, each individual taxi trip's polyline is decoded into a list of latitude, longitude pairs with timestamps that delineate the taxi's traveled path. With the data from the unpacked polylines from the CSV files, I wrote a script that collects relevant data and prepares sets of timed OSC bundles (using <a href="https://github.com/ilzxc/m158a-node_python_odot">this OSC library</a>) of the polyline-decoded taxi movements. One real-time minute is scaled to the equivalence of 0.5 seconds. The bundled relevant information--such as the longitude and latitude coordinates--is then sent through a <a href="https://en.wikipedia.org/wiki/Network_socket">UDP socket</a> to the Max program. In Max, I set up four voices that track up to four taxis' movements at a time, with each of their sound paths layered on top of one another.
       </p>
+      <img src="../assets/images/bundling.png" class="skinnier">
+      <p class="subtitle">A portion of the Python script that extracts relevant data from the decoded polyline</p>
+      <br>
+      <h1>MUSICAL TONES</h1>
       <p>
-        The latitude, longitude coordinate pairs are scaled in two ways to set up the waveforms and frequency. Whether or not the taxi is currently full or currently empty, and how many passengers the cab is carrying, determines the amplitude.
+        The latitude, longitude coordinate pairs are scaled in two ways to set up the <a href="https://en.wikipedia.org/wiki/Waveform">waveforms</a> and <a href="https://en.wikipedia.org/wiki/Frequency">frequency</a>. Whether or not the taxi is currently full or currently empty, and how many passengers the cab is carrying, determines the <a href="https://en.wikipedia.org/wiki/Amplitude">amplitude</a>.
       </p>
       <img src="../assets/images/oneVoice.png" class="skinnier">
-      <p class="subtitle">The Max patch for one taxi/one voice</p>
+      <p class="subtitle">The Max patch for one taxi (one voice)</p>
       <p>
-        WAVEFORMS: The taxi's X and Y coordinates are scaled from 0 to 1, according to the RBFI patch dimensions. Depending on the taxi's location in the RBFI (radial basis function interpolater) UI and the locations of the four waveform points, different waveforms (cycle, sawtooth, triangle, and rectangle) are weighted in the RBFI patch by its proximity to each of the individual waveform's inner radius.
+        WAVEFORMS: The taxi's X and Y coordinates are scaled from 0 to 1, according to the RBFI (<a href-"https://en.wikipedia.org/wiki/Radial_basis_function">radial basis function interpolater</a>) patch dimensions. Depending on the taxi's location in the RBFI UI and the locations of the four waveform points, different waveforms (cycle, sawtooth, triangle, and rectangle) are weighted in the RBFI patch by its proximity to each of the individual waveform's inner radius.
       </p>
       <img src="../assets/images/rbfi.png" class="skinnier">
       <p class="subtitle">RBFI (radial basis function interpolater)</p>
@@ -81,7 +86,8 @@
       <img src="../assets/images/multislider.png" class="skinnier">
       <p class="subtitle">The weight of each waveform</p>
       <p>
-        FREQUENCY: A list of steps for a two-octave chromatic scale and a list containing starting pitch 'C' for four octaves is set up. The taxi's current Y coordinate is scaled from the single trip's start and end Y coordinates (or the minimum and maximum Y coordinates of taxi's total trips) to a number between 0 to 16, mod 4, taken as the index for the base note in the list of octave starting pitches. The taxi's current X coordinate is scaled from the trip's minimum and maximum X coordinates of the taxi's total trips (or the single trip's start and end X coordinates) to a number between 0 and 14, taken as the index for the step/note away from the base note in the octave.
+        FREQUENCY: A list of steps for a two-octave <a href="https://en.wikipedia.org/wiki/Diatonic_and_chromatic">diatonic scale</a>* and a list containing starting pitch 'C' for four octaves is set up. The taxi's current Y coordinate is scaled from the single trip's start and end Y coordinates (or the minimum and maximum Y coordinates of taxi's total trips) to a number between 0 to 16, mod 4, taken as the index for the base note in the list of octave starting pitches. The taxi's current X coordinate is scaled from the trip's minimum and maximum X coordinates of the taxi's total trips (or the single trip's start and end X coordinates) to a number between 0 and 14, taken as the index for the step/note away from the base note in the octave.<br>
+        *The Max patch and Python scripts say "chromatic", but it is actually "diatonic"--unfortunately, when I caught the typos, my Max subscription had already ended, thus saying goodbye to my Max patch saving capabilities.
       </p>
       <p>
         AMPLITUDE: Depending on if the taxi is currently full or empty, the amplitude will be set to a higher or lower amplitude, respectively. The more passengers in the cab during the trip, the more dominant the amplitude will be.
