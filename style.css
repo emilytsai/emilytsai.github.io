@@ -67,23 +67,29 @@ a {
     width: auto;
 }
 
+.blue-background {
+    background-color: #F0F8FF;
+}
+
 .white-space {
 	height: 20px;
 }
 
 .enter-button {
     text-align: center;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-style: double;
     border-color: #ff751a;
+    border-radius: 2px;
     color: #ff751a;
 }
 
 .enter-button:hover {
-    opacity: 0.4;
+    background-color: #ff751a;
+    color: #F0F8FF;
 }
 
 .content {
