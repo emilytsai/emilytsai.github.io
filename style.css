@@ -160,6 +160,7 @@ h1 {
     float: left;
     background-color: rgba(25, 25, 25, 0);
     list-style: none;
+    font-family: 'Quicksand', sans-serif;
     font-size: 14px;
     position: fixed;
 }
@@ -172,8 +173,6 @@ h1 {
     padding-left: 30px;
     padding-top: 20px;
     text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
 }
 
 .side-container {
@@ -188,10 +187,8 @@ h1 {
 
 #currproject a {
     text-transform: lowercase;
-    /*color: rgba(105, 110, 110, 1);*/
-    /*opacity: 0.5;*/
     font-size: 60px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 #currproject a:hover {
@@ -206,6 +203,8 @@ h1 {
     padding-right: 20px;
     padding-left: 20px;
     background-color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
     text-align: center;
     position: fixed;
     top: 0em;
