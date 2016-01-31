@@ -2,11 +2,12 @@
 <html>
   <head>
     <title>Emily Tsai</title>
-    <meta name="description" content="Emily Tsai. I'm an undergraduate student studying Computer Science at University of California, Berkeley.">
+    <meta name="description" content="Emily Tsai. I'm an undergraduate student studying computer science at University of California, Berkeley.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../style.css" charset="utf-8"/>
@@ -39,8 +40,10 @@
     <ul class="sidebar">
     <div class="sidebar-container">
     <span id="sidetext">
+        <li><a href="../projects/otherproject.html">Another Project</a></li>
         <li id="currproject"><a href="../projects/track158taxis.html">Track 158: Taxis</a></li>
         <li><a href="../projects/otherproject.html">Other Project</a></li>
+        <li><a href="../projects/otherproject.html">Some Other Project</a></li>
     </span>
     </div>
     </ul>
@@ -54,20 +57,21 @@
         Github repository: [<a href="https://github.com/emilytsai/track158-taxis">track158-taxis</a>]
       </p>
       <div class="white-space"></div>
+      <h1>THE IDEA</h1>
       <p>
-        The class assignment was the following quest: "Create something cool in Max."
+        Our class midterm assignment was the following quest:
+        <br>"Create something cool in Max."
       </p>
-      <br>
-      <h1>THE IDEA, THE CODE</h1>
-      <p>
-        For my project, I created a data "audio"-lization of taxi data. Using real NYC taxi data, I created a program that tracks the unique path of a taxi over the course of 24 hours and translates the taxi's locations into sound based on its latitude and longitude coordinates.
+        For my project, I created a data "audio"-lization of taxi data. Using real NYC taxi data, I created a program that tracks the unique path of a taxi over the course of 24 hours and translates the taxi's locations into sound based on its latitude and longitude coordinates. The resulting sequence of melodies outlines the unique bundle of trips that a taxi driver makes each day.
       </p>
       <img src="../assets/images/presentationMode.png" class="skinnier">
       <p class="subtitle">The Max program's user interface. When the program is run, the colored blocks will show an "X" (a taxi) traveling across it. The "X" tracks the movement of the taxis; its placement marks the distance from, and weight of, each of the four different kinds of soundwaves used in this program (the types of soundwaves are in the four circles).</p>
+      <br>
+      <h1>THE DATA; THE CODE</h1>
       <p>
         Using the <a href="https://developers.google.com/maps/documentation/utilities/polylinealgorithm?hl=en">polyline-encoded</a> data from Chris Whong's <a href="http://nyctaxi.herokuapp.com">NYC Taxis: A Day in the Life</a> project (original data can be found at the <a href="http://www.andresmh.com/nyctaxitrips/">2013 NYC Taxi Trip Data</a>), I wrote a set of Python scripts that takes the decoded data files and translates the taxi's unique path across New York City into sound. Using <a href="https://gist.github.com/signed0/2031157">this polyline-decoder script</a>, each individual taxi trip's polyline is decoded into a list of latitude, longitude pairs with timestamps that delineate the taxi's traveled path. With the data from the unpacked polylines from the CSV files, I wrote a script that collects relevant data and prepares sets of timed OSC bundles (using <a href="https://github.com/ilzxc/m158a-node_python_odot">this OSC library</a>) of the polyline-decoded taxi movements. One real-time minute is scaled to the equivalence of 0.5 seconds. The bundled relevant information--such as the longitude and latitude coordinates--is then sent through a <a href="https://en.wikipedia.org/wiki/Network_socket">UDP socket</a> to the Max program. In Max, I set up four voices that track up to four taxis' movements at a time, with each of their sound paths layered on top of one another.
       </p>
-      <img src="../assets/images/bundling.png" class="skinnier">
+      <img src="../assets/images/codeSnippet.png" class="skinnier">
       <p class="subtitle">A portion of the Python script that extracts relevant data from the decoded polyline</p>
       <br>
       <h1>MUSICAL TONES</h1>
@@ -87,7 +91,7 @@
       <p class="subtitle">The weight of each waveform</p>
       <p>
         FREQUENCY: A list of steps for a two-octave <a href="https://en.wikipedia.org/wiki/Diatonic_and_chromatic">diatonic scale</a>* and a list containing starting pitch 'C' for four octaves is set up. The taxi's current Y coordinate is scaled from the single trip's start and end Y coordinates (or the minimum and maximum Y coordinates of taxi's total trips) to a number between 0 to 16, mod 4, taken as the index for the base note in the list of octave starting pitches. The taxi's current X coordinate is scaled from the trip's minimum and maximum X coordinates of the taxi's total trips (or the single trip's start and end X coordinates) to a number between 0 and 14, taken as the index for the step/note away from the base note in the octave.<br>
-        *The Max patch and Python scripts say "chromatic", but it is actually "diatonic"--unfortunately, when I caught the typos, my Max subscription had already ended, thus saying goodbye to my Max patch saving capabilities.
+        <span class="subtitle">*The Max patch and Python scripts say "chromatic", but it is actually "diatonic"--unfortunately, when I caught the typos, my Max subscription had already ended, thus saying goodbye to my Max patch saving capabilities.</span>
       </p>
       <p>
         AMPLITUDE: Depending on if the taxi is currently full or empty, the amplitude will be set to a higher or lower amplitude, respectively. The more passengers in the cab during the trip, the more dominant the amplitude will be.
