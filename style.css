@@ -49,7 +49,7 @@ h1 {
 }
 
 .subtitle {
-    font-size: 12px;
+	font-size: 12px;
 }
 
 /* Page Contents Style Stuff */
@@ -76,7 +76,7 @@ h1 {
 }
 
 .white-space {
-    height: 20px;
+	height: 20px;
 }
 
 .enter-button {
@@ -89,11 +89,6 @@ h1 {
     border-color: #ff751a;
     border-radius: 2px;
     color: #ff751a;
-    -webkit-transition: background-color .15s ease-in-out;
-    -moz-transition: background-color .15s ease-in-out;
-    -ms-transition: background-color .15s ease-in-out;
-    -o-transition: background-color .15s ease-in-out;
-    transition: background-color .15s ease-in-out;
 }
 
 .enter-button:hover {
@@ -112,7 +107,7 @@ h1 {
 }
 
 .grid {
-    margin: 16px;
+	margin: 16px;
     width: 260px;
     height: 260px;
     overflow: hidden;
@@ -127,7 +122,7 @@ h1 {
 }
 
 .grid-image {
-    height: 260px;
+	height: 260px;
     overflow: hidden;
     padding-bottom: 5px;
 }
@@ -141,19 +136,19 @@ h1 {
 }
 
 .projects-body a {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .projects-body a:hover {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 
 .wider {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .skinnier {
-    width: 100%;
+	width: 100%;
 }
 
 /* Projects Navigation Sidebar */
