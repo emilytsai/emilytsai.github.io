@@ -9,7 +9,7 @@ html {
     position: relative; }
 
 body {
-    margin: 50px 0 60px; }
+    margin: 0 0 60px 0; }
 
 a {
     cursor: pointer;
@@ -21,15 +21,39 @@ h1 {
     letter-spacing: 4px;
     font-size: 52px; }
 
+h2 {
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 46px; }
+
+h3 {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 28px;
+    margin: 0; }
+
+h4 {
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin: 0; }
+
+p {
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    font-size: 14px;}
+
 .clear {
     clear: both;
     visibility: hidden; }
 
 .left {
-    float: left; }
+    float: left;
+    text-align: left; }
 
 .right {
-    float: right; }
+    float: right;
+    text-align: right; }
 
 #curr a {
     border-bottom: 1px solid #ff751a; }
@@ -42,12 +66,16 @@ h1 {
 
 /* Homepage Style */
 
+.wrapper {
+    padding: 28px 0 0 0;
+    border-top: 4px solid #000000; }
+
 #projects {
-    height: 800px;
+    height: 900px;
     background-color: white; }
 
 #work {
-    height: 800px;
+    height: 1250px;
     background-color: rgba(249, 234, 217, 0.31); }
 
 #resume {
@@ -56,7 +84,7 @@ h1 {
 
 .inner-content{
     margin: auto;
-    width: 960px;
+    width: 74%;
 }
 
 /* Page Contents Style Stuff */
@@ -64,16 +92,28 @@ h1 {
 .right-body {
     float: right;
     text-align: right;
-    padding-right: 16%;
-    width: 40%; }
+    padding-right: 18%;
+    width: 32%; }
 
 .left-photo {
     float: left;
-    width: 38%; }
+    padding-left: 18%; }
+
+.right-left-photo {
+    float: right;
+    width: 2400%; }
+
+.left-wrap {
+    float: left;
+    width: 10px; }
 
 .left-photo img {
-    padding-left: 30%;
-    height: 480px;
+    height: 530px;
+    width: auto;
+    opacity: 0.8; }
+
+.right-left-photo img {
+    height: 530px;
     width: auto; }
 
 .blue-background {
@@ -99,8 +139,35 @@ h1 {
     width: 960px; }
 
 .content-header {
-    margin: auto;
+    margin: 0;
+    padding: 40px 0;
     width: 80%; }
+
+.item {
+    width: 80%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+    padding: 10px;
+    display: block;
+    transition: all 0.5s ease; }
+
+.item:hover {
+    border-color: #ff751a; }
+
+.item-photo {
+    height: 260px;
+    width: auto;
+    overflow: hidden; }
+
+.item-content {
+    margin: auto;
+    padding: 12px;
+    width: 55%; }
+
+.small-content {
+    margin: auto;
+    padding: 12px;
+    width: 40%; }
 
 .grid {
 	margin: 16px;
@@ -229,7 +296,7 @@ h1 {
 
 .header li, .sticky li {
     display: inline;
-    padding: 0 36px;
+    padding: 0 4%;
     font-weight: 600; }
 
 /* Footer */
