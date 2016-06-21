@@ -31,16 +31,26 @@ h2 {
     text-transform: lowercase; }
 
 h3 {
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 1px;
-    font-size: 28px;
-    margin: 0; }
+    font-size: 34px;
+    margin: 0;
+    text-transform: uppercase; }
 
 h4 {
     font-weight: 300;
     letter-spacing: 1px;
     font-size: 18px;
     margin: 0; }
+
+h5 {
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 20px 0;
+    margin: 0;
+}
 
 p {
     font-weight: 300;
@@ -70,20 +80,32 @@ p {
     font-weight: 700; }
 
 .subtitle {
-	font-size: 12px; }
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase; }
 
-/* Homepage Style */
+.story .subtitle {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400; }
+
+.link {
+    text-decoration: underline; }
 
 .wrapper {
     position: relative;
-    background-color: rgba(252, 252, 252, 1); }
+    background-color: rgba(252, 252, 252, 1);
+    padding-bottom: 100px; }
 
-.top-content {
+/* Homepage Style */
+
+/*.top-content {
     top: 0;
     left: 0;
     position: relative;
     background-color: rgba(58, 58, 58, 0.2);
-    height: calc(100% - 78px); }
+    height: calc(100% - 78px); }*/
 
 .right-body {
     float: right;
@@ -94,25 +116,25 @@ p {
 
 .left-photo {
     float: left;
-    height: 400px;
+    max-height: 400px;
     margin: 40px 0 40px calc(100% - 900px); }
 
 .left-photo img {
-    height: 480px;
+    max-height: 460px;
     width: auto;
     opacity: 0.8; }
 
 #projects {
-    height: 1000px;
+    height: 1450px;
     background-color: rgba(252, 252, 252, 1); }
 
 #work {
     height: 1450px;
     background-color: rgba(252, 252, 252, 1); }
 
-#resume {
-    height: 200px;
-    background-color: rgba(252, 252, 252, 1); }
+/*#contact {
+    height: 100px;
+    background-color: rgba(252, 252, 252, 1); }*/
 
 .inner-content{
     margin: auto;
@@ -124,15 +146,34 @@ p {
     margin: auto;
     padding: 0 100px; }
 
+.content p {
+    font-size: 15px;
+    line-height: 2; }
+
+.story a {
+    text-decoration: underline; }
+
 .content-header {
     margin: 0;
     padding: 80px 0 30px 0;
     width: 80%; }
 
+.story {
+    float: left;
+    width: calc(100% - 200px); }
+
+.story-photo {
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
+
+.story-photo img {
+    width: 100%; }
+
 .item {
     border: 2px solid rgba(0, 0, 0, 0.1);
     margin: 30px 0;
-    padding: 50px 100px;
+    padding: 50px 10%;
     display: block;
     transition: all 0.5s ease; }
 
@@ -140,46 +181,40 @@ p {
     /*border-color: #ff751a; }*/
     border-color: #000000; }
 
+.item p {
+    line-height: 1.5; }
+
 .item-photo {
-    height: 260px;
-    width: auto;
+    width: 34%;
+    height: auto;
     overflow: hidden; }
 
 .item-content {
     margin: auto;
     padding: 12px;
-    width: 55%; }
+    width: 56%; }
 
 .grid-image {
     height: 260px;
     overflow: hidden;
     padding-bottom: 5px; }
 
+.large-image {
+    margin-left: -8px; }
+
+.large-photo {
+    width: 45%; }
+
 .small-content {
     margin: auto;
     padding: 12px;
-    width: 40%; }
-
-.projects-body {
-    width: 55%;
-    min-height: 100%;
-    float: right;
-    padding-right: 22%;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.5px; }
-
-.projects-body a {
-	text-decoration: underline; }
-
-.projects-body a:hover {
-	opacity: 0.5; }
+    width: 48%; }
 
 /* Header/Navigation Bar */
 
 .header {
     margin: auto;
-    padding: 20px;
+    padding: 120px 100px 120px 0px;
     background-color: rgba(252, 252, 252, 1);
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
@@ -187,9 +222,9 @@ p {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: right;
-    position: fixed;
-    top: 0em;
-    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
     z-index: 1000; }
 
 .fixed {
@@ -249,29 +284,33 @@ p {
 .link-img {
     height: 20px; }
 
-/* Projects Navigation Sidebar */
+/* Navigation Sidebar */
 
 .sidebar {
     margin: auto;
-    padding: 0px 0px 0px 48px;
-    width: 15%;
+    padding: 0 0 80px 0;
+    width: 180px;
     height: 100%;
-    float: left;
-    background-color: rgba(25, 25, 25, 0);
+    float: right;
     list-style: none;
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 1px;
-    font-size: 14px;
-    position: fixed; }
+    font-size: 22px;
+    position: relative; }
 
-.sidebar a:hover{
-    color: #ff751a; }
+.sidebar a {
+    color: rgba(80, 80, 80, 1); }
+
+.sidebar li:hover, .sidebar a:hover {
+    color: black; }
 
 .sidebar li {
-    padding-left: 30px;
-    padding-top: 20px;
+    padding: 20px 0;
     text-transform: uppercase; }
+
+.sidebar #sidebar-title {
+    border-bottom: 0.5px solid black; }
 
 .side-container {
     position: relative;
