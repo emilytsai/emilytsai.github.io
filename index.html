@@ -33,13 +33,14 @@
       $(window).scroll(function() {
         var sticky = $(".sticky"),
             scroll = $(window).scrollTop();
-          
-        if (scroll >= stickyOffset) {
-          sticky.addClass("fixed");
-          $(".content").css("padding-top", "78px");
-        } else {
-          $(".content").css("padding-top", "0px");
-          sticky.removeClass("fixed");
+        if ($(window).width() > 570) {  
+          if (scroll >= stickyOffset) {
+            sticky.addClass("fixed");
+            $(".content").css("padding-top", "78px");
+          } else {
+            $(".content").css("padding-top", "0px");
+            sticky.removeClass("fixed");
+          }
         }
       });
 
