@@ -350,7 +350,7 @@ p {
     /*color: rgba(165, 170, 170, 1);*/
     font-weight: 400;
     letter-spacing: 1px;
-    padding: 0;
+    padding: 10px 0;
     transition: all 0.5s ease; }
 
 .header a:hover, .sticky a:hover {
@@ -443,7 +443,7 @@ p {
 #currproject a:hover {
     color: black; }
 
-/* Phone/Small Screens */
+/* Mobile/Small Screens */
 
 @media (max-width: 570px) {
     .right-body {
@@ -453,7 +453,7 @@ p {
         /*height: calc(100% - 78px);*/
         width: 90%; }
 
-    .sticky{
+    .sticky {
         margin: auto;
         padding: 5px 10px;
         /*margin: auto 100px;
@@ -467,6 +467,32 @@ p {
         text-align: right;
         z-index: 1000; }
 
+    .header {
+        margin: auto;
+        padding: 40px 10px 40px 0px;
+        background-color: rgba(252, 252, 252, 1);
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: right;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1000; }
+
+    .header a, .sticky a {
+        font-weight: 400;
+        letter-spacing: 1px;
+        padding: 0px;
+        transition: all 0.5s ease; }
+
+    .header li, .sticky li {
+        display: inline;
+        padding: 20px 0 20px 24px;
+        font-weight: 600; }
+
     .left-photo {
         width: 0%;
         float: left; }
@@ -479,6 +505,13 @@ p {
     .inner-content, .content {
         margin: auto;
         padding: 0 2%; }
+
+    .item {
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+        padding: 30px 10%;
+        display: block;
+        transition: all 0.5s ease; }
 
     .item-photo {
         display: none;
