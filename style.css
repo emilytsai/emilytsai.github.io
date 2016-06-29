@@ -237,11 +237,11 @@ p {
 }
 
 #projects {
-    height: 1450px;
+    height: auto;
     background-color: rgba(252, 252, 252, 1); }
 
 #work {
-    height: 1450px;
+    height: auto;
     background-color: rgba(252, 252, 252, 1); }
 
 .inner-content{
