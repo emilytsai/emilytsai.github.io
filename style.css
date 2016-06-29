@@ -141,6 +141,24 @@ p {
         opacity: 0; }
 }
 
+@media (max-width: 570px) {
+    .right-body {
+        float: right;
+        text-align: right;
+        margin: 40px 100px 40px 0;
+        height: calc(100% - 78px);
+        width: 75%; }
+
+    .left-photo {
+        width: 0%;
+        float: left; }
+
+    .left-photo img {
+        max-height: 460px;
+        width: auto;
+        opacity: 0; }
+}
+
 /* Homepage Items */
 
 @media (min-width: 800px) {
@@ -421,13 +439,14 @@ p {
         width: 0px;
         opacity: 0;
         height: 0%;
-        right: -200px;
         float: right;
         position: relative; }
 
     .sidebar li {
         width: 0;
-        height: 0; }
+        height: 0;
+        pointer-events: none;
+        cursor: default; }
 }
 
 #sidetext {
