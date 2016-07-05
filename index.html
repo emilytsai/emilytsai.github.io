@@ -7,7 +7,7 @@
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="style.css" charset="utf-8"/>
@@ -33,12 +33,14 @@
       $(window).scroll(function() {
         var sticky = $(".sticky"),
             scroll = $(window).scrollTop();
-        if ($(window).width() > 570) {  
+        if ($(window).width() > 600) {  
           if (scroll >= stickyOffset) {
             sticky.addClass("fixed");
             $(".content").css("padding-top", "78px");
+            $("#title").css("opacity", "1");
           } else {
             $(".content").css("padding-top", "0px");
+            $("#title").css("opacity", "0");
             sticky.removeClass("fixed");
           }
         }
@@ -76,7 +78,7 @@
     <!-- Header -->
 
     <ul class="sticky">
-        
+        <li id="title">emily tsai</li>
         <li><a href="index.html">ABOUT</a></li>
         <li><a href="#projects">PROJECTS</a></li>
         <li><a href="#work">WORK</a></li>
