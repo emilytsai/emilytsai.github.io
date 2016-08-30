@@ -51,6 +51,14 @@ h5 {
     padding: 20px 0;
     margin: 0; }
 
+.cs61a {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 80px 0 20px 0;
+    margin: 0; }
+
 h6 {
     font-weight: 400;
     letter-spacing: 1px;
