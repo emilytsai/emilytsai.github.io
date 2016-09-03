@@ -134,7 +134,7 @@
 
       <p>Notice:
       <br>(1) Note that <code>"False"</code> is not the same thing as <code>False</code>. <code>"False"</code> is a non-empty string that evaluates to <code>True</code>, <code>False</code> is the <code>False</code> value in Python.
-      <br>(2) Notice the difference between <code>print</code> vs. <code>return</code>. With <code>print</code>, we continue to evaluate the rest of the body until we reach a <code>return</code>. With <code>return</code>, we return the value and halt execution.
+      <br>(2) Notice the difference between <code>print</code> vs. <code>return</code>. With <code>print</code>, we print the value and continue on to evaluate the next line of the body. With <code>return</code>, we return the value and do not continue on to the next line of execution.
       <br>(3) Nitpick: When we use <code>print</code> on a string, the interpreter shows no quotes. When we use <code>return</code> on a string, the interpreter prints the quotes. (i.e. <code>print("hello")</code> becomes <code>hello</code> while <code>return "hello"</code> becomes <code>'hello'</code>)
       </p>
       </div>
@@ -163,7 +163,7 @@
       </div>
 
       <p>Notice:
-      <br>(1) What is the difference between <code>return</code> vs. <code>print</code> in terms of what the next step is? Does the line <code>n += 1</code> ever get reached here?
+      <br>(1) Notice the difference between <code>print</code> vs. <code>return</code>. With <code>print</code>, we print the value and continue on to evaluate the next line of the body. With <code>return</code>, we return the value and do not continue on to the next line of execution. Thus, does the line <code>n += 1</code> ever get reached here? (No.)
       </p>
 
       <br>
@@ -189,7 +189,7 @@
       </div>
 
       <p>Notice:
-      <br>(1) Remember to change the variable such that the condition eventually evaluates to <code>False</code> and we exit the loop.
+      <br>(1) Remember to change the variable <code>n</code> such that the condition eventually evaluates to <code>False</code> and we exit the loop. Otherwise, we will run an infinite loop.
       </p>
 
       <br>
@@ -246,7 +246,34 @@
       </div>
 
       <p>Notice:
-      <br>(1) Why do we print three <code>3</code>s and not more or less?
+      <br>(1) Why do we print three <code>3</code>s and not more or less? Take a look:
+      <table>
+        <tr>
+          <th style="width:70px">n</th>
+          <th style="width:70px">n < 3</th>
+          <th style="width:70px">Output:</th>
+        </tr>
+        <tr>
+          <th>0</th>
+          <th>True</th>
+          <th>3</th>
+        </tr>
+        <tr>
+          <th >1</th> 
+          <th>True</th>
+          <th>3</th>
+        </tr>
+        <tr>
+          <th>2</th> 
+          <th>True</th>
+          <th>3</th>
+        </tr>
+        <tr>
+          <th>3</th> 
+          <th>False</th>
+          <th></th>
+        </tr>
+      </table>
       </p>
 
     <!-- End Story -->
