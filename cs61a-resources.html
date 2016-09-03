@@ -22,7 +22,6 @@
         ga('create', 'UA-71710494-1', 'auto');
         ga('send', 'pageview');
     </script>
-
   </head>
   
   <body>
@@ -58,24 +57,196 @@
         </ul>
       </p>
       <p>
-        I'm super excited for this semester and I hope you are, too! Feel free to say hi if you see me around campus!
+        I'm super excited for this semester and I hope you are, too! Feel free to say hi if you see me around campus :)
         <br>
         Please fill out <b><a href="https://goo.gl/forms/jkwa5XdNPXMdPPCa2">this form</a></b> if you have any <b>questions/concerns</b> or if you'd like to leave me some <b>anonymous feedback</b>.
       </p>
 
     <div id="week00">
-      <h6 class="cs61a">
+      <h3 class="cs61a">
         Week 00
-      </h6>
+      </h3>
       <a href="https://goo.gl/forms/FbWqgqeByBbw3JxZ2">Attendance</a>
     </div>
 
     <div id="week01">
-      <h6 class="cs61a">
+      <h3 class="cs61a">
         Week 01
-      </h6>
+      </h3>
       <a href="https://goo.gl/forms/FTqOYJvrGbBQbRIp1">Attendance</a>
-    </div>
+      
+      <br>
+
+      <p>Problems I went over in class:
+      <br>(If you don't see them here, they are probably on the discussion worksheet--you can check the solutions on the course website.)</p>
+
+      <br>
+
+      <h4>
+      Question:
+      </h4>
+      <div class="question">
+      <pre><code class="language-py">
+      >>> if "":
+      ...     return 1/0
+      ... else:
+      ...     return 0/1
+      </code></pre>
+      </div>
+
+      <h4>
+      Answer:
+      </h4>
+      <div class="answer">
+      <pre><code class="language-py">
+       0.0
+      </code></pre>
+      </div>
+
+      <p>Notice:
+      <br>(1) Remember that <code>""</code> is a False-y value in Python. Thus, the <code>1/0</code> does not get evaluated because the True suite is not entered. (Check: What are the five False-y values in Python?)
+      <br>(2) Notice that the return value is the evaluated value of the expression (i.e. <code>0.0</code>), and not the expression itself (i.e. <code>1/0</code>). (Check: What are expressions and values?)
+      </p>
+
+      <br>
+
+      <h4>
+      Question:
+      </h4>
+      <div class="question">
+      <pre><code class="language-py">
+      >>> if "False":
+      ...     print("False")
+      ... else:
+      ...     print("True")
+      </code></pre>
+      </div>
+
+      <h4>
+      Answer:
+      </h4>
+      <div class="answer">
+      <pre><code class="language-py">
+       False
+       True
+      </code></pre>
+      </div>
+
+      <p>Notice:
+      <br>(1) Note that <code>"False"</code> is not the same thing as <code>False</code>. <code>"False"</code> is a non-empty string that evaluates to <code>True</code>, <code>False</code> is the <code>False</code> value in Python.
+      <br>(2) Notice the difference between <code>print</code> vs. <code>return</code>. With <code>print</code>, we continue to evaluate the rest of the body until we reach a <code>return</code>. With <code>return</code>, we return the value and halt execution.
+      <br>(3) Nitpick: When we use <code>print</code> on a string, the interpreter shows no quotes. When we use <code>return</code> on a string, the interpreter prints the quotes. (i.e. <code>print("hello")</code> becomes <code>hello</code> while <code>return "hello"</code> becomes <code>'hello'</code>)
+      </p>
+      </div>
+
+      <br>
+
+      <h4>
+      Question:
+      </h4>
+      <div class="question">
+      <pre><code class="language-py">
+      >>> n = 0:
+      ... while n < 3:
+      ...     return 3
+      ...     n += 1
+      </code></pre>
+      </div>
+
+      <h4>
+      Answer:
+      </h4>
+      <div class="answer">
+      <pre><code class="language-py">
+       3
+      </code></pre>
+      </div>
+
+      <p>Notice:
+      <br>(1) What is the difference between <code>return</code> vs. <code>print</code> in terms of what the next step is?
+      </p>
+
+      <br>
+
+      <h4>
+      Question:
+      </h4>
+      <div class="question">
+      <pre><code class="language-py">
+      >>> n = 0:
+      ... while n < 3:
+      ...     print(3)
+      </code></pre>
+      </div>
+
+      <h4>
+      Answer:
+      </h4>
+      <div class="answer">
+      <pre><code class="language-py">
+       (infinite loop)
+      </code></pre>
+      </div>
+
+      <p>Notice:
+      <br>(1) Remember to change the variable such that the conditional eventually evaluates to <code>False</code> and we exit the loop.
+      </p>
+
+      <br>
+
+      <h4>
+      Question:
+      </h4>
+      <div class="question">
+      <pre><code class="language-py">
+      >>> n = 0:
+      ... while n < 3:
+      ...     n += 1
+      ... return n
+      </code></pre>
+      </div>
+
+      <h4>
+      Answer:
+      </h4>
+      <div class="answer">
+      <pre><code class="language-py">
+       3
+      </code></pre>
+      </div>
+
+      <p>Notice:
+      <br>(1) Notice where the return statement is: since it is on the outside of the <code>while</code> loop, we return <code>n</code> only once we have exited the loop.
+      </p>
+
+      <br>
+
+      <h4>
+      Question:
+      </h4>
+      <div class="question">
+      <pre><code class="language-py">
+      >>> n = 0:
+      ... while n < 3:
+      ...     print(3)
+      ...     n += 1
+      </code></pre>
+      </div>
+
+      <h4>
+      Answer:
+      </h4>
+      <div class="answer">
+      <pre><code class="language-py">
+       3
+       3
+       3
+      </code></pre>
+      </div>
+
+      <p>Notice:
+      <br>(1) Why do we print three <code>3</code>s and not more or less? (Notice when the conditional becomes <code>False</code>; what is <code>n</code> when the conditional becomes <code>False</code>?)
+      </p>
 
     <!-- End Story -->
     </div>
