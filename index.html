@@ -48,6 +48,11 @@
 
     });
     </script>
+    <script>
+    window.fadeIn = function(obj) {
+        $(obj).fadeIn(1000);
+    }
+    </script>
 
   </head>
   
@@ -57,7 +62,7 @@
     <!-- Heading -->
 
     <div class="left-photo">
-      <img src="assets/images/semicolon.gif">
+      <img onload="fadeIn(this)" src="assets/images/semicolon.gif" style="display:none;">
     </div>
 
     <div class="right-body">
