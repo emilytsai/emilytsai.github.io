@@ -129,13 +129,12 @@ table, th {
         text-align: right;
         margin: 40px 100px 40px 0;
         height: calc(100% - 78px);
-        /*height: 100%;*/
         width: 40%; }
 
     .left-photo {
         float: left;
         max-height: 400px;
-        margin: 40px 0 40px calc(100% - 900px); }
+        margin: 40px 0 40px 100px; }
 
     .left-photo img {
         max-height: 460px;
